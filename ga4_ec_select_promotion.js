@@ -5,7 +5,7 @@
  * Push this event when a user clicks on a promotion.
  */
 
-window.dataLayer.push({
+dataLayer.push({
     'event': 'select_promotion',
     'ecommerce': {
         'currency': 'GBP',                               // The local currency of the price that is collected - optional
