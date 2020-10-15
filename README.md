@@ -1,7 +1,5 @@
 # google-analytics-4-ecommerce-data-layer-guide
-Data layer examples for ecommerce features for Google Analytics 4 (formerly app + web)
-
-**IMPORTANT:** Repository must be kept **PRIVATE** until the public announcement of the name change to Google Analytics 4 on **October 14th 2020**
+Data layer examples for ecommerce features for Google Analytics 4 (formerly App + Web)
 
 Ecommerce events covered in this repository:
 
@@ -18,3 +16,6 @@ Ecommerce events covered in this repository:
 - [select_promotion (Promotion Clicks)](/ga4_ec_select_promotion.js)
 
 Code snippets built using previous Star Trek themed values from the old [gtm-dl-guide for ecommerce](https://github.com/Measurelab/gtm-dl-guide) as well as developer guides from Google: [GA](https://developers.google.com/analytics/devguides/collection/app-web/ecommerce#measure_refunds) & [GTM](https://developers.google.com/tag-manager/ecommerce-appweb#measure_refunds)
+
+Custom JS variable for Google Tag Manager for converting Enhanced Ecommerce data layer events into a GA4-compatible format:
+- [ga4EcomConvert() (Ecommerce Object Conversion)](/ga4EcomConvert.js)
