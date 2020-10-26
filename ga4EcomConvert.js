@@ -44,7 +44,7 @@ function ga4EcomConvert() {
      * !!!!!!!!!!!!!!!!!!!!!!! DO NOT EDIT BELOW THIS LINE !!!!!!!!!!!!!!!!!!!!!!!!
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-    // Declare new App + Web ecommerce object for output
+    // Declare new GA4 ecommerce object for output
     var ga4_ecom = {
         ecom_event: event,
         currency: ecom_currency,
