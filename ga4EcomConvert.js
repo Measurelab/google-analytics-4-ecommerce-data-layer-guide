@@ -1,7 +1,7 @@
 /**
  * Function:  ga4EcomConvert
  * 
- * Version:  1.0 (15th October 2020)
+ * Version:  1.1 (25th March 2021)
  * 
  * Purpose:  To convert Universal Analytics' Enhanged Ecommerce 'ecommerce' object into Google Analytics 4's new ecommerce schema within Google Tag Manager. This code should be stored as a Custom JavaScript variable.
  * 
@@ -17,7 +17,7 @@
  * 
  * Author:  Victor Sarker
  * 
- * Measurelab 2020
+ * Measurelab 2021
  * 
  */
 
@@ -195,21 +195,17 @@ function ga4EcomConvert() {
 
             // PURCHASES
         case ee_purchase:
-            ga4_ecom = {
-                'purchase': ga4_ecom
-            };
-
             ecom.purchase.actionField ? actionFieldObj = ecom.purchase.actionField : null
 
-            ga4_ecom.purchase['transaction_id'] = actionFieldObj.id;
-            ga4_ecom.purchase['affiliation'] = actionFieldObj.affiliation;
-            ga4_ecom.purchase['value'] = actionFieldObj.revenue;
-            ga4_ecom.purchase['tax'] = actionFieldObj.tax;
-            ga4_ecom.purchase['shipping'] = actionFieldObj.shipping;
-            ga4_ecom.purchase['coupon'] = actionFieldObj.coupon;
+            ga4_ecom['transaction_id'] = actionFieldObj.id;
+            ga4_ecom['affiliation'] = actionFieldObj.affiliation;
+            ga4_ecom['value'] = actionFieldObj.revenue;
+            ga4_ecom['tax'] = actionFieldObj.tax;
+            ga4_ecom['shipping'] = actionFieldObj.shipping;
+            ga4_ecom['coupon'] = actionFieldObj.coupon;
 
             ecom.purchase.products.forEach(function (product) {
-                ga4_ecom.purchase.items.push({
+                ga4_ecom.items.push({
                     'item_name': product.name || '',
                     'item_id': product.id || '',
                     'item_brand': product.brand || '',
